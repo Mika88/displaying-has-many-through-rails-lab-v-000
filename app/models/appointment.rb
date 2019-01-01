@@ -3,6 +3,7 @@ class Appointment < ActiveRecord::Base
   belongs_to :patient
 
   def readable_datetime
-    self.appointment_datetime.strftime("%B %d, %Y at %I:%M")
+    d = Date.parse(self.appointment_datetime)
+    d.strftime("%B %d, %Y at %I:%M")
   end
 end
