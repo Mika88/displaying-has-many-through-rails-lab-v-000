@@ -4,6 +4,6 @@ class Appointment < ActiveRecord::Base
 
   def readable_datetime
     d = DateTime.parse(self.appointment_datetime)
-    d.strftime("%B %d, %Y at %I:%M")
+    d.strftime("%B %d, %Y at %H:%M")
   end
 end
